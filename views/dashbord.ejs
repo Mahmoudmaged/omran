@@ -1,0 +1,61 @@
+<%- include('./header.ejs') %> 
+
+
+
+
+<div class="container mt-5 pt-5 text-center">
+        <div class="col-md-8 m-auto">
+            <form class="" action="/add-article" method="GET">
+                
+                <button class="  btn btn-info m-auto px-5"href="/add-article" type="submit">Add Article</button>
+            </form>
+        </div>
+</div>
+
+
+
+<div class="container mt-5">
+
+    <div class="row">
+        <% for( let i = 0; i < result.length; i++ ) { %>
+        
+        
+        <div class="col-md-4 mt-3">
+            <div class="card text-center MyCard">
+                <div class="card-header">
+                    <img src="<%=result[i].imgURl%>" class="card-img-top" alt="...">
+                    <h5 class="card-title"><%=result[i].name %> </h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><%=result[i].description%> </p>
+                    <a href="/blog-details/<%=result[i].id%>" class="btn btn-primary btn-sm">Read More</a>
+                    <a href="/edit/<%=result[i].id%>" class="btn btn-info btn-sm">Edit</a>
+                    <a href="/Delete/<%=result[i].id%> " class="btn btn-danger btn-sm">Delete</a>
+                </div>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
+            </div>
+        </div>
+        <% } %>
+        
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<%- include('./footer.ejs') %> 
