@@ -1,0 +1,28 @@
+<%- include("./header") %> 
+ <div class="container py-5 mt-2">
+    <form  action="/editFormData/<%=editConatiner[0]._id%>" method="POST" enctype="multipart/form-data" >
+        <div class="form-group">
+            <input value="<%=editConatiner[0].name%>" name="name" placeholder="Edit Product Name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+        <div class="form-group">
+          <input value="<%=editConatiner[0].price%>" name="price" placeholder="Edit Product price" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <input value="<%=editConatiner[0].total %>" name="total" placeholder="Edit Product quantity" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <input value="<%=editConatiner[0].description %>" name="description" placeholder="Edit Product description" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+        <div class="form-group">
+          <input value="<%=editConatiner[0].imgURL %>" type="file" name="img" multiple class="form-control my-4" >
+        </div>
+      
+     <div class="form-group text-center">
+      <button type="submit" class="btn btn-primary">Submit</button>
+     </div>
+      </form>
+ </div>
+ <%- include("./footer") %> 
+ <script src="js/index.js"></script>
+</body>
+</html>
